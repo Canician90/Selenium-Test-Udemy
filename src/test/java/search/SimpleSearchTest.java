@@ -22,7 +22,10 @@ public class SimpleSearchTest {
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://testfasttrackit.info/selenium-test/");
-        driver.findElement(By.id("search")).sendKeys("vase"+ Keys.ENTER);
+        String searchKeyword = "vase";
+
+
+        driver.findElement(By.id("search")).sendKeys(searchKeyword+ Keys.ENTER);
         // $x("//div[@class='product-info']//button[@title='Add to Cart']");
         //$x("//div[@class='product-info' and ./descendant::*[text()='Herald Glass Vase']]//button[@title='Add to Cart']");
 
@@ -37,7 +40,7 @@ public class SimpleSearchTest {
 
         for (WebElement productName : productNames) {
             assertThat("Some of the products name do not contain in the searched keyword",
-                    productName.getText(), containsString("VASE"));
+                    productName.getText(), containsString(searchKeyword.toUpperCase()));
 
         }
     }
