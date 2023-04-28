@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SimpleSearchTest {
+    //este facut
 
     @Test
     public void simpleSearchWithOneKeyword() {
