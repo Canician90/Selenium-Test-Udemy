@@ -8,6 +8,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import webviews.Header;
+import webviews.ProductsGrid;
 
 import java.util.List;
 
@@ -25,10 +28,12 @@ public class SimpleSearchTest extends TestBASE {
         WebDriver driver = new ChromeDriver();
 
         driver.get(AppConfig.getSiteUrl());
+
+        Header header = PageFactory.initElements(driver, Header.class);
         String searchKeyword = "vase";
 
 
-        driver.findElement(By.id("search")).sendKeys(searchKeyword+ Keys.ENTER);
+        header.getSearch(searchKeyword);
         // $x("//div[@class='product-info']//button[@title='Add to Cart']");
         //$x("//div[@class='product-info' and ./descendant::*[text()='Herald Glass Vase']]//button[@title='Add to Cart']");
 
@@ -36,12 +41,12 @@ public class SimpleSearchTest extends TestBASE {
 
         System.out.println("Pressed Enter in search field");
 
-        List<WebElement> productNames = driver.findElements(By.cssSelector("h2.product-name > a"));
-        // orice descendent fara ">"
+        ProductsGrid productsGrid = PageFactory.initElements(driver, ProductsGrid.class));
 
-        System.out.println("Stored" + productNames.size() + "product names");
 
-        for (WebElement productName : productNames) {
+        System.out.println("Stored" + productsGrid.getProductNames().size() + "product names");
+
+        for (Object productName : productsGrid.getProductNames()) {
             assertThat("Some of the products name do not contain in the searched keyword",
                     productName.getText(), containsString(searchKeyword.toUpperCase()));
 

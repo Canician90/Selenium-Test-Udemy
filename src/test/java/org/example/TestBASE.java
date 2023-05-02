@@ -7,12 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestBASE {
     protected WebDriver driver = null;
+
     @Before
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", AppConfig.getChromeDriverPath());
-
-
-        driver = new ChromeDriver();
+        String browser = System.getProperty("browser","chrome");
+        driver =DriverFactory.getDriver();
     }
     @After
     public void tearDown() {
