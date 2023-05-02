@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66b0305f-9f04-433b-8c14-d0c7307b4ed8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/production.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/qa.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/TestBASE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/search/SimpleSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/search/SimpleSearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +36,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.SimpleSearchTest.simpleSearchWithOneKeyword">
     <configuration name="SimpleSearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SeleniumTestUdemy" />
@@ -99,22 +104,18 @@
       <option name="project" value="LOCAL" />
       <updated>1682662546637</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="SimpleSearchTest">
+      <created>1682667433004</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682667433004</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="SimpleSearchTest" />
     <option name="LAST_COMMIT_MESSAGE" value="SimpleSearchTest" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/search/SimpleSearchTest.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

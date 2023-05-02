@@ -1,5 +1,7 @@
 package search;
 
+import org.example.AppConfig;
+import org.example.TestBASE;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -12,16 +14,17 @@ import java.util.List;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class SimpleSearchTest {
+public class SimpleSearchTest extends TestBASE {
 
 
     @Test
     public void simpleSearchWithOneKeyword() {
-        System.setProperty("webdriver.chrome.driver", "C:\\web drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", AppConfig.getChromeDriverPath());
+
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("http://testfasttrackit.info/selenium-test/");
+        driver.get(AppConfig.getSiteUrl());
         String searchKeyword = "vase";
 
 
